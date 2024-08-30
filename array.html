@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let x = [20, 30, [2, 3, 4, 5], [19, [30, 25, 35], 20], 40, 50];
+    let solvearray = [];
+
+    let a = [...x];
+
+    while (a.length) {
+        let current = a.pop();
+
+        if (Array.isArray(current)) {
+
+            a.push(...current);
+        } else {
+
+            solvearray.unshift(current);
+        }
+    }
+
+    console.log(solvearray);
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
